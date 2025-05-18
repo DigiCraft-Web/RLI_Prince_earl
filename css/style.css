@@ -1088,11 +1088,18 @@ textarea {
 #floating-logo:hover {
   transform: scale(1.1);
 }
+.intro-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 #id-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    margin: 0px;
     width: 100%;
 }
 
@@ -1104,7 +1111,10 @@ textarea {
     position: relative;
     transform-style: preserve-3d;
     cursor: pointer;
+    margin-left: -250px; /* moves card 20px to the left */
 }
+
+
 
 .card img {
     width: 100%;
