@@ -1065,6 +1065,27 @@ textarea {
         padding-inline: 7rem !important;
     }
 }
+#floating-logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#floating-logo img {
+  width: 60%;
+  height: auto;
+  display: block;
+}
+
+#floating-logo:hover {
+  transform: scale(1.1);
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
