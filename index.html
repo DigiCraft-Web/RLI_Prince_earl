@@ -25,7 +25,8 @@
 </head>
 
 <body id="main-page" class="main-contents" onload="change()">
-    <audio id="bg-music" src="audio/Ruby-Chan Nani ga suki _... (Original) Doksli.mp3" loop autoplay muted></audio>
+    <audio src="audio/Ruby-Chan Nani ga suki _... (Original) Doksli.mp3" autoplay loop></audio>
+    
 
 
     
@@ -121,11 +122,11 @@
   <p class="port-text">This part is an example</p>
 
   <div class="intro-flex" id="id-card">
-    <div class="card">
-      <img src="images/id-front.jpg" alt="Front Image" class="front">
-      <img src="images/id-back.jpg" alt="Back Image" class="back">
-    </div>
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <img src="images/ID_front (1).png" alt="Front Image" class="front">
+    <img src="images/ID_back.png" alt="Back Image" class="back">
   </div>
+</div>
 
 </section>
 
@@ -240,7 +241,7 @@
         <div class="control control-3" data-id="MY Type">
             <i class="fa fa-briefcase" aria-hidden="true"></i>
             <div class="hover-items hoverit">
-                <p>MY Type</p>
+                <p>MY ID</p>
             </div>
 
         </div>
