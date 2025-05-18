@@ -817,7 +817,10 @@ textarea {
 }
 
 .intro-flex {
+
     display: flex;
+    flex-direction: column;  /* stack vertically */
+    align-items: center; 
 }
 
 .intro-flex img {
@@ -1067,10 +1070,10 @@ textarea {
 }
 #floating-logo {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 200px;
+  left: 20px;
   width: 60px;
-  height: 60px;
+  height: 200px;
   z-index: 1000;
   cursor: pointer;
   transition: transform 0.3s ease;
