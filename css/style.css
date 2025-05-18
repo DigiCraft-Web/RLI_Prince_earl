@@ -1112,7 +1112,10 @@ textarea {
     transform-style: preserve-3d;
     cursor: pointer;
     margin-left: -250px; /* moves card 20px to the left */
+   
+    
 }
+
 
 
 
@@ -1125,6 +1128,7 @@ textarea {
     position: absolute;
     transition: transform 0.6s ease-in-out;
     object-fit: cover;
+    box-shadow: 0 0 20px 8px rgba(255, 255, 255, 1);
 }
 
 .card .front {
