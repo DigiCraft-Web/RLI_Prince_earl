@@ -1175,7 +1175,7 @@ textarea {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 .glow-shake {
-    animation: shake 0.2s, glow 0.2s ease-out;
+    animation: shake 0.5s, glow 0.5s ease-out;
 }
 
 @keyframes shake {
