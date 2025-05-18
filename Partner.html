@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Single Statement</title>
+  <style>
+    /* Reset & Basic Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      animation: pulse 0.8s infinite alternate;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+
+    button {
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    This person is single because he is incapable of forming<br>
+    real-life relationships — he prefers 2D characters.
+  </h1>
+
+  <button onclick="history.back()">Go Back</button>
+</body>
+</html>
