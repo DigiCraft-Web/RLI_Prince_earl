@@ -83,7 +83,7 @@ function updateType() {
     var typed = new Typed(".auto-input", {
         strings: [
             "I'm a loyal person",
-            "This is Upgraded website",
+            "This is custom upgraded page",
             "Explore more with me😉❤️",
         ],
         typeSpeed: 90,
