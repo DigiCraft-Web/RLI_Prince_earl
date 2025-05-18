@@ -25,7 +25,7 @@
 </head>
 
 <body id="main-page" class="main-contents" onload="change()">
-    <audio src="audio/Ruby-Chan Nani ga suki _... (Original) Doksli.mp3" autoplay loop></audio>
+    
     
 
 
@@ -50,10 +50,11 @@
 
             <div class="left-header">
                 <div class="h-shape">
-                    <div class="image">
-                        <img src="images/robo-wave-removebg-preview.png" alt="">
-                    </div>
-                </div>
+  <div class="image" id="audio-controller">
+    <img src="images/robo-wave-removebg-preview.png" alt="">
+  </div>
+</div>
+
             </div>
             <a href="#main" id="floating-logo">
                 <img src="images/Relationshiplinkidlogo.png" alt="Logo" />
@@ -90,25 +91,29 @@
 
     <main>
         <!-- about -->
-        <section class="section sec-2 about animate__fadeIn" id="about">
-            <div class="main-title">
-                <h2>
-                    About <span>me</span>
-                </h2>
-            </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Get to <span>Know</span> me</h4>
-                    <p>Hello! I'm a Loyal Person
-                        <br><br> <span>My life goal is to love you unconditionally 
+<section class="section sec-2 about animate__fadeIn" id="about">
+    <div class="main-title">
+        <h2>
+            About <span>me</span>
+        </h2>
+    </div>
+    <div class="about-container">
+        <div class="left-about">
+            <h4>Get to <span>Know</span> me</h4>
+            <p>Hello! I'm a Loyal Person
+                <br><br> <span>My life goal is to love you unconditionally</span>
+                <br><br> Today, I promise to be good in ***
+            </p>
+        </div>
+        <div class="right-about-images">
+            <h4>Card Variants: you can suggest custom design</h4>
+            <img src="images/variants.png" alt="Photo 1">
+            <h4>Couple Cards: Connecting couple custom logos</h4>
+            <img src="images/couple.png" alt="Photo 2">
+        </div>
+    </div>
+</section>
 
-</span>
-                        <br> <br>Today, I promise to be good in ***
-                    </p>
-                </div>
-            </div>
-            
-        </section>
 
         <!-- MY Type -->
         <section class="section sec-3 MY Type animate__fadeIn" id="MY Type">
@@ -284,7 +289,42 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="js/index.js" async="false"></script>
-    <audio id="bg-music" src="audio/Ruby-Chan Nani ga suki _... (Original) Doksli.mp3" loop autoplay></audio>
+    <audio id="click-audio" src="audio/Ruby-Chan Nani ga suki _... (Original) Doksli.mp3"></audio>
+<script>
+    const roboImage = document.querySelector(".h-shape .image");
+    const audio = document.getElementById("click-audio");
+    let isPlaying = false;
+    let clickTimer;
+
+    roboImage.addEventListener("click", () => {
+        roboImage.classList.add("clicked");
+
+        setTimeout(() => roboImage.classList.remove("clicked"), 400);
+
+        if (clickTimer) {
+            clearTimeout(clickTimer);
+            clickTimer = null;
+            audio.currentTime = 0;
+            audio.play();
+            isPlaying = true;
+        } else {
+            clickTimer = setTimeout(() => {
+                if (isPlaying) {
+                    audio.pause();
+                } else {
+                    audio.play();
+                }
+                isPlaying = !isPlaying;
+                clickTimer = null;
+            }, 250);
+        }
+    });
+</script>
+
+
+
+    
+
 
 
 </body></html>
