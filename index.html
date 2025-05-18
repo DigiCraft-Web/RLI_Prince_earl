@@ -290,37 +290,38 @@
 
     <script src="js/index.js" async="false"></script>
     <audio id="click-audio" src="audio/Ruby-Chan Nani ga suki _... (Original) Doksli.mp3"></audio>
+
 <script>
-    const roboImage = document.querySelector(".h-shape .image");
+    const img = document.querySelector(".h-shape .image img");
     const audio = document.getElementById("click-audio");
+
     let isPlaying = false;
-    let clickTimer;
+    let clickTimeout;
 
-    roboImage.addEventListener("click", () => {
-        roboImage.classList.add("clicked");
+    img.addEventListener("click", () => {
+        img.classList.add("glow-shake");
 
-        setTimeout(() => roboImage.classList.remove("clicked"), 400);
-
-        if (clickTimer) {
-            clearTimeout(clickTimer);
-            clickTimer = null;
+        if (clickTimeout) {
+            clearTimeout(clickTimeout);
+            clickTimeout = null;
             audio.currentTime = 0;
             audio.play();
             isPlaying = true;
         } else {
-            clickTimer = setTimeout(() => {
+            clickTimeout = setTimeout(() => {
                 if (isPlaying) {
                     audio.pause();
                 } else {
                     audio.play();
                 }
                 isPlaying = !isPlaying;
-                clickTimer = null;
+                clickTimeout = null;
             }, 250);
         }
+
+        setTimeout(() => img.classList.remove("glow-shake"), 1000);
     });
 </script>
-
 
 
     
